@@ -10,12 +10,9 @@ from interbotix_common_modules.common_robot.robot import (
 from interbotix_common_modules.angle_manipulation import angle_manipulation as ang
 from interbotix_xs_modules.xs_robot.arm import InterbotixManipulatorXS
 import numpy as np
-import rclpy
 from rclpy.utilities import remove_ros_args
 import modern_robotics as mr
 from arm_controller.msg import PositionAndJoints as P
-
-import csv
 
 class DataGenerator(InterbotixManipulatorXS):
     def __init__(self, pargs, args=None):
