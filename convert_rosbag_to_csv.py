@@ -14,7 +14,7 @@ add_types = {}
 # Add definitions from one idl file to the dict.
 add_types.update(get_types_from_idl(idl_text))
 
-bagpath = Path('../datasets/virtual_position_data_1_20_000')
+bagpath = Path('../datasets/joint_positions_data_1000')
 
 typestore = get_typestore(Stores.ROS2_HUMBLE)
 typestore.register(add_types)
@@ -23,7 +23,7 @@ typestore.register(add_types)
 with AnyReader([bagpath], default_typestore=typestore) as reader:
     connections = [x for x in reader.connections if x.topic == '/position_data']
 
-    csv_file = open('./data.csv', 'w', newline='')
+    csv_file = open('../datasets/joint_positions_data_1000.csv', 'w', newline='')
     csv_writer = csv.writer(csv_file)
     csv_writer.writerow(['x', 'y', 'pitch', 'shoulder', 'elbow', 'wrist'])
     rows = []
