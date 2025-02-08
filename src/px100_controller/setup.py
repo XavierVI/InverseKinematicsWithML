@@ -20,6 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'pytorch_controller = px100_controller.pytorch_controller:main',
+            'data_generator = px100_controller.data_generator:main'
         ],
     },
 )
