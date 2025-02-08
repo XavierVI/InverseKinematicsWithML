@@ -4,7 +4,7 @@
   <name>px100_controller</name>
   <version>0.0.0</version>
   <description>TODO: Package description</description>
-  <maintainer email="">xavier</maintainer>
+  <maintainer email="vigenesisvi@gmail.com">xavier</maintainer>
   <license>Apache-2.0</license>
 
   <test_depend>ament_copyright</test_depend>
@@ -16,8 +16,6 @@
   <depend>std_msgs</depend>
   <depend>geometry_msgs</depend>
 
-  <depend>interbotix_moveit_interface</depend>
-  <depend>interbotix_moveit_interface_msgs</depend>
   <depend>interbotix_xs_msgs</depend>
   <depend>interbotix_xs_modules</depend>
   <depend>interbotix_xsarm_sim</depend>

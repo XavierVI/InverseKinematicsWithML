@@ -1,3 +1,9 @@
 *.joblib
 *.state_dict
 *.csv
+
+install/*
+build/*
+log/*
+*/__pycache__/*
+*.pyc

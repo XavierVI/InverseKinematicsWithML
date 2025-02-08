@@ -34,10 +34,12 @@ def launch_setup(context, *args, **kwargs):
     force_node_launch_arg = LaunchConfiguration('use_fake_force')
     publish_poses_launch_arg = LaunchConfiguration('publish_poses')
 
+    # TODO: add if conditions to launch specific arm controllers
+
     pytorch_controller_node = Node(
         name='pytorch_controller_node',
-        package='arm_controller',
-        executable='pytorch_controller.py',
+        package='px100_controller',
+        executable='pytorch_controller',
         namespace=robot_name_launch_arg,
         parameters=[{
             'robot_model': robot_model_launch_arg,
@@ -171,7 +173,7 @@ def generate_launch_description():
         ),
         DeclareLaunchArgument(
             'use_admittance_control',
-            default_value='false',
+            default_value='true',
             choices=('true', 'false'),
             description="Launches an admittance controller node when true."
         ),
