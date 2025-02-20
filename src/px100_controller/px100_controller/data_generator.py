@@ -12,7 +12,7 @@ from interbotix_xs_modules.xs_robot.arm import InterbotixManipulatorXS
 import numpy as np
 from rclpy.utilities import remove_ros_args
 import modern_robotics as mr
-from arm_controller.msg import PositionAndJoints as P
+from arm_controller_msgs.msg import Configuration as C
 
 class DataGenerator(InterbotixManipulatorXS):
     def __init__(self, pargs, args=None):
@@ -23,7 +23,7 @@ class DataGenerator(InterbotixManipulatorXS):
             args=args,
         )
         self.publisher = self.core.get_node().create_publisher(
-            P,
+            C,
             'position_data',
             10
         )        
@@ -81,7 +81,7 @@ class DataGenerator(InterbotixManipulatorXS):
         
         # computing the virtual frame position
         virtual_fk_position = np.linalg.inv(rot_matrix) @ fk_position
-        msg = P()
+        msg = C()
         msg.x = virtual_fk_position[0, 3]
         # msg.position.y = cartesian_position[1]
         # msg.position.z = cartesian_position[2]
