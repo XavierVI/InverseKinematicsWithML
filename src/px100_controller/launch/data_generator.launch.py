@@ -60,6 +60,7 @@ def generate_launch_description():
         arguments=[
             '--robot_name', 'px100',
             '--robot_model', 'px100',
+            '--verbose', 'True',
         ],
         output='screen'
     )

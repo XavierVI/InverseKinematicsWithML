@@ -42,6 +42,7 @@ class DataGenerator(InterbotixManipulatorXS):
 
     def generate_data(self):
         # lower and upper limits for the joint angles
+        num_of_joints = 4
         lower_limits = self.arm.group_info.joint_lower_limits
         upper_limits = self.arm.group_info.joint_upper_limits
         # home position matrix and screw-axis list
@@ -55,10 +56,10 @@ class DataGenerator(InterbotixManipulatorXS):
             low=lower_limits,  # Use the entire lower_limits array
             high=upper_limits,  # Use the entire upper_limits array
             # Generate a (size x num_joints) array
-            size=(size, len(lower_limits))
+            size=(size, num_of_joints)
         )
-        # keep the waist angle at 0
-        joint_angles_list[:, 0] = 0
+        # keep the waist angle at  pi / 2
+        joint_angles_list[:, 0] = np.pi / 2
 
         self.log_info(f'{joint_angles_list}')
 
