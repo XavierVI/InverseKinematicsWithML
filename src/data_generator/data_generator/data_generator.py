@@ -35,7 +35,7 @@ class DataGenerator(InterbotixManipulatorXS):
         try:
             robot_startup()
             self.generate_data()
-            robot_shutdown()
+            
         except KeyboardInterrupt:
             robot_shutdown()
 
