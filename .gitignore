@@ -2,6 +2,7 @@
 *.state_dict
 *.csv
 
+models/*
 install/*
 build/*
 log/*
