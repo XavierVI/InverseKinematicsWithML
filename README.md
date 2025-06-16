@@ -7,5 +7,6 @@ In this project, I use Scikit-Learn, PyTorch, and the [PincherX-100](https://doc
 - [ROS2 Open Source Packages](https://docs.trossenrobotics.com/interbotix_xsarms_docs/ros2_packages.html)
 - [rosbags](https://gitlab.com/ternaris/rosbags/-/tree/master?ref_type=heads)
 - [Modern Robotics](https://pypi.org/project/modern-robotics/)
+- [Torch Levenberg-Marquardt](https://github.com/fabiodimarco/torch-levenberg-marquardt/tree/main)
 
 
